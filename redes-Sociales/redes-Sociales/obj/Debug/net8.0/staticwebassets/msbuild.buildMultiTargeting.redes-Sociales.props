@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\redes-Sociales.props" />
+</Project>

@@ -1,0 +1,28 @@
+﻿@using redes_Sociales.Data.Models
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@inject IJSRuntime JS
+
+<div class="my-4">
+    <canvas id="graphCanvas" width="800" height="600" style="border:1px solid #ccc;"></canvas>
+</div>
+
+@code {
+    [Parameter]
+    public Grafo Grafo { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && Grafo != null)
+        {
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    ReferenceHandler = ReferenceHandler.IgnoreCycles
+                };
+            var grafoJson = JsonSerializer.Serialize(Grafo, options);
+
+            await JS.InvokeVoidAsync("drawGraph", "graphCanvas", grafoJson);
+        }
+    }
+}

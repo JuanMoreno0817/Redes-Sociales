@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="border p-2">Red Social Académica</h2>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Columna de Formulario -->
+        <div class="col-md-5">
+            <div class="mb-3">
+                <label class="form-label">Buscar:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Ingrese un nombre...">
+                    <button class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre:</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Carrera:</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Intereses:</label>
+                <input type="text" class="form-control" placeholder="IA, Programación, ...">
+            </div>
+            <button class="btn btn-success w-100">Agregar Perfil</button>
+        </div>
+
+        <!-- Columna de Gráfica -->
+        <div class="col-md-7 text-center">
+            <h4>Red de Colaboración</h4>
+            <canvas id="graphCanvas" width="400" height="400" class="border"></canvas>
+            <!-- Leyenda -->
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <h5>Leyenda:</h5>
+                    <p><span class="badge bg-primary">●</span> Académico</p>
+                    <p><span class="badge bg-secondary">─</span> Conexión</p>
+                    <p><span class="badge bg-warning">●</span> Seleccionado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

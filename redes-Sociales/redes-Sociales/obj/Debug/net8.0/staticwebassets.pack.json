@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
+      "PackagePath": "staticwebassets\\redes-Sociales.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\js\\graph.js",
+      "PackagePath": "staticwebassets\\js\\graph.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.redes-Sociales.props",
+      "PackagePath": "build\\redes-Sociales.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.redes-Sociales.props",
+      "PackagePath": "buildMultiTargeting\\redes-Sociales.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.redes-Sociales.props",
+      "PackagePath": "buildTransitive\\redes-Sociales.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.redes-Sociales.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
