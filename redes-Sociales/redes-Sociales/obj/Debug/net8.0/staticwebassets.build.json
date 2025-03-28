@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SnPY6q9TkYoalnc5kbflu4bW/DkSEZ4quX9zAnNlGVc=",
+  "Hash": "6cTevtAh12Yp1IUT19MJEkkleBSvHRTxPL3vuztwPxQ=",
   "Source": "redes-Sociales",
   "BasePath": "_content/redes-Sociales",
   "Mode": "Default",
@@ -10,19 +10,40 @@
     {
       "Name": "redes-Sociales\\wwwroot",
       "Source": "redes-Sociales",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
       "BasePath": "_content/redes-Sociales",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\redes-Sociales.styles.css",
+      "Identity": "C:\\Users\\zulet\\.nuget\\packages\\blazor.extensions.canvas\\1.1.1\\staticwebassets\\blazor.extensions.canvas.js",
+      "SourceId": "Blazor.Extensions.Canvas",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\zulet\\.nuget\\packages\\blazor.extensions.canvas\\1.1.1\\staticwebassets\\",
+      "BasePath": "_content/Blazor.Extensions.Canvas",
+      "RelativePath": "blazor.extensions.canvas.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rkaaoxtw3d",
+      "Integrity": "9Z/+MBCfTH/eE5e5aYMGZ+WzaJLk8tl2MwD/AGVvifc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\zulet\\.nuget\\packages\\blazor.extensions.canvas\\1.1.1\\staticwebassets\\blazor.extensions.canvas.js"
+    },
+    {
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\redes-Sociales.styles.css",
       "SourceId": "redes-Sociales",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/redes-Sociales",
-      "RelativePath": "redes-Sociales.styles.css",
+      "RelativePath": "redes-Sociales#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,17 +52,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "nakqhgbawz",
+      "Integrity": "wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\redes-Sociales.styles.css"
+      "OriginalItemSpec": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\redes-Sociales.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
       "SourceId": "redes-Sociales",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/redes-Sociales",
-      "RelativePath": "redes-Sociales.bundle.scp.css",
+      "RelativePath": "redes-Sociales#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -50,104 +73,935 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "nakqhgbawz",
+      "Integrity": "wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\app.css",
       "SourceId": "redes-Sociales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
       "BasePath": "_content/redes-Sociales",
-      "RelativePath": "bootstrap/bootstrap.min.css",
+      "RelativePath": "css/app#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "SourceId": "redes-Sociales",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\",
-      "BasePath": "_content/redes-Sociales",
-      "RelativePath": "bootstrap/bootstrap.min.css.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\css\\app.css",
-      "SourceId": "redes-Sociales",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\",
-      "BasePath": "_content/redes-Sociales",
-      "RelativePath": "css/app.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
+      "Fingerprint": "0vifknfaxw",
+      "Integrity": "xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "redes-Sociales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
       "BasePath": "_content/redes-Sociales",
-      "RelativePath": "favicon.png",
+      "RelativePath": "css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "kb3out9fl2",
+      "Integrity": "MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\vis.min.css",
+      "SourceId": "redes-Sociales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
+      "BasePath": "_content/redes-Sociales",
+      "RelativePath": "css/vis.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ac5e8luxqa",
+      "Integrity": "iq5ygGJ7021Pi7H5S+QAUXCPUfaBzfqeplbg/KlEssg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\vis.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\favicon.png",
+      "SourceId": "redes-Sociales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
+      "BasePath": "_content/redes-Sociales",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\js\\graph.js",
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\bootstrap.bundle.min.js",
       "SourceId": "redes-Sociales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
       "BasePath": "_content/redes-Sociales",
-      "RelativePath": "js/graph.js",
+      "RelativePath": "js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "2omjt04a4f",
+      "Integrity": "gvZPYrsDwbwYJLD5yeBfcNujPhRoGOY831wwbIzz3t0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\graph.js",
+      "SourceId": "redes-Sociales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
+      "BasePath": "_content/redes-Sociales",
+      "RelativePath": "js/graph#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o07sdsckiv",
+      "Integrity": "eBDVsDyaq52/0ps04V/cPyhr21bLTURl8V81DaKpnNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\graph.js"
+    },
+    {
+      "Identity": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\vis.min.js",
+      "SourceId": "redes-Sociales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\",
+      "BasePath": "_content/redes-Sociales",
+      "RelativePath": "js/vis.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i6fsgk4vow",
+      "Integrity": "JuQeAGbk9rG/EoRMixuy5X8syzICcvB0dj3KindZkY0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\vis.min.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "_content/Blazor.Extensions.Canvas/blazor.extensions.canvas.js",
+      "AssetFile": "C:\\Users\\zulet\\.nuget\\packages\\blazor.extensions.canvas\\1.1.1\\staticwebassets\\blazor.extensions.canvas.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Z/+MBCfTH/eE5e5aYMGZ+WzaJLk8tl2MwD/AGVvifc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 17 Feb 2021 04:13:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Z/+MBCfTH/eE5e5aYMGZ+WzaJLk8tl2MwD/AGVvifc="
+        }
+      ]
+    },
+    {
+      "Route": "css/app.0vifknfaxw.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 04:29:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0vifknfaxw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM="
+        }
+      ]
+    },
+    {
+      "Route": "css/app.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 04:29:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:11:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.min.kb3out9fl2.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:11:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kb3out9fl2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98="
+        }
+      ]
+    },
+    {
+      "Route": "css/vis.min.ac5e8luxqa.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\vis.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23777"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iq5ygGJ7021Pi7H5S+QAUXCPUfaBzfqeplbg/KlEssg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:09:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ac5e8luxqa"
+        },
+        {
+          "Name": "label",
+          "Value": "css/vis.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iq5ygGJ7021Pi7H5S+QAUXCPUfaBzfqeplbg/KlEssg="
+        }
+      ]
+    },
+    {
+      "Route": "css/vis.min.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\vis.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23777"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iq5ygGJ7021Pi7H5S+QAUXCPUfaBzfqeplbg/KlEssg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:09:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iq5ygGJ7021Pi7H5S+QAUXCPUfaBzfqeplbg/KlEssg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:17:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 20:17:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.2omjt04a4f.js",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80663"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gvZPYrsDwbwYJLD5yeBfcNujPhRoGOY831wwbIzz3t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:09:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2omjt04a4f"
+        },
+        {
+          "Name": "label",
+          "Value": "js/bootstrap.bundle.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gvZPYrsDwbwYJLD5yeBfcNujPhRoGOY831wwbIzz3t0="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80663"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gvZPYrsDwbwYJLD5yeBfcNujPhRoGOY831wwbIzz3t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:09:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gvZPYrsDwbwYJLD5yeBfcNujPhRoGOY831wwbIzz3t0="
+        }
+      ]
+    },
+    {
+      "Route": "js/graph.js",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\graph.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2951"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eBDVsDyaq52/0ps04V/cPyhr21bLTURl8V81DaKpnNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 03:15:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eBDVsDyaq52/0ps04V/cPyhr21bLTURl8V81DaKpnNQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/graph.o07sdsckiv.js",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\graph.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2951"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eBDVsDyaq52/0ps04V/cPyhr21bLTURl8V81DaKpnNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 03:15:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o07sdsckiv"
+        },
+        {
+          "Name": "label",
+          "Value": "js/graph.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eBDVsDyaq52/0ps04V/cPyhr21bLTURl8V81DaKpnNQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/vis.min.i6fsgk4vow.js",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\vis.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "690222"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JuQeAGbk9rG/EoRMixuy5X8syzICcvB0dj3KindZkY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:09:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i6fsgk4vow"
+        },
+        {
+          "Name": "label",
+          "Value": "js/vis.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JuQeAGbk9rG/EoRMixuy5X8syzICcvB0dj3KindZkY0="
+        }
+      ]
+    },
+    {
+      "Route": "js/vis.min.js",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\vis.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "690222"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JuQeAGbk9rG/EoRMixuy5X8syzICcvB0dj3KindZkY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:09:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JuQeAGbk9rG/EoRMixuy5X8syzICcvB0dj3KindZkY0="
+        }
+      ]
+    },
+    {
+      "Route": "redes-Sociales.bundle.scp.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 02:23:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI="
+        }
+      ]
+    },
+    {
+      "Route": "redes-Sociales.nakqhgbawz.bundle.scp.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 02:23:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nakqhgbawz"
+        },
+        {
+          "Name": "label",
+          "Value": "redes-Sociales.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI="
+        }
+      ]
+    },
+    {
+      "Route": "redes-Sociales.nakqhgbawz.styles.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\redes-Sociales.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 02:23:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nakqhgbawz"
+        },
+        {
+          "Name": "label",
+          "Value": "redes-Sociales.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI="
+        }
+      ]
+    },
+    {
+      "Route": "redes-Sociales.styles.css",
+      "AssetFile": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\bundle\\redes-Sociales.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 02:23:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfWuFREDQXjcll2xW8WmoGiXeol+uM458lHQeMJ5JoI="
+        }
+      ]
     }
   ]
 }

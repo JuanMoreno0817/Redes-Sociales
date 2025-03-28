@@ -1,34 +1,32 @@
-using redes_Sociales.Components;
 using redes_Sociales.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-
-builder.Services.AddRazorPages();
+// Configurar Razor Pages para que use "components/pages" como directorio raíz
+builder.Services.AddRazorPages(options =>
+{
+    options.RootDirectory = "/components/pages";
+});
 builder.Services.AddServerSideBlazor();
 
-// Registrar el servicio
-builder.Services.AddSingleton<GraphService>();
+// Registrar el servicio GraphService
+builder.Services.AddScoped<GraphService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseExceptionHandler("/Error");
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-app.UseAntiforgery();
+app.UseRouting();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapBlazorHub();
+// Ahora, dado que la raíz de las páginas es "/components/pages", 
+// _Host.cshtml se encontrará como "/_Host"
+app.MapFallbackToPage("/_Host");
 
 app.Run();

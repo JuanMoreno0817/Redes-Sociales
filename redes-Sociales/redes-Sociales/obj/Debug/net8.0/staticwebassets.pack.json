@@ -1,28 +1,36 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
-      "PackagePath": "staticwebassets\\redes-Sociales.bundle.scp.css"
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\redes-Sociales.bundle.scp.css",
+      "PackagePath": "staticwebassets\\redes-Sociales.nakqhgbawz.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\vis.min.css",
+      "PackagePath": "staticwebassets\\css\\vis.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Zara Ramirez\\Desktop\\redes-Sociales\\wwwroot\\js\\graph.js",
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\graph.js",
       "PackagePath": "staticwebassets\\js\\graph.js"
+    },
+    {
+      "Id": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\wwwroot\\js\\vis.min.js",
+      "PackagePath": "staticwebassets\\js\\vis.min.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.redes-Sociales.props",
@@ -35,6 +43,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.redes-Sociales.props",
       "PackagePath": "buildTransitive\\redes-Sociales.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.redes-Sociales.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.redes-Sociales.Microsoft.AspNetCore.StaticWebAssets.props",

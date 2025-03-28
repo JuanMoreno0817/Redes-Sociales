@@ -1,0 +1,7 @@
+wwwroot\css\app.css
+wwwroot\css\bootstrap.min.css
+wwwroot\css\vis.min.css
+wwwroot\favicon.png
+wwwroot\js\bootstrap.bundle.min.js
+wwwroot\js\graph.js
+wwwroot\js\vis.min.js

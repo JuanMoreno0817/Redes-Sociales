@@ -1,28 +1,94 @@
-﻿@using redes_Sociales.Data.Models
-@using System.Text.Json
-@using System.Text.Json.Serialization
-@inject IJSRuntime JS
+﻿@page "/graph-viewer"
+@using redes_Sociales.Data
+@using redes_Sociales.Data.Models
+@inject IJSRuntime JSRuntime
+@inject GraphService GraphService
+@implements IDisposable
 
-<div class="my-4">
-    <canvas id="graphCanvas" width="800" height="600" style="border:1px solid #ccc;"></canvas>
+<div class="graph-container">
+    <div id="graph-visualization" class="graph-box"></div>
 </div>
 
 @code {
-    [Parameter]
-    public Grafo Grafo { get; set; }
+    private Grafo grafo = new();
+    private DotNetObjectReference<GraphViewer>? objRef;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            grafo = GraphService.Grafo;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+        await Task.CompletedTask;
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && Grafo != null)
+        if (firstRender)
         {
-            var options = new JsonSerializerOptions
-                {
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                    ReferenceHandler = ReferenceHandler.IgnoreCycles
-                };
-            var grafoJson = JsonSerializer.Serialize(Grafo, options);
-
-            await JS.InvokeVoidAsync("drawGraph", "graphCanvas", grafoJson);
+            await Task.Delay(100);
+            await InitializeGraph();
         }
+    }
+
+    private async Task InitializeGraph()
+    {
+        try
+        {
+            var nodes = grafo.Nodos.Values.Select(n => new
+            {
+                id = n.Id,
+                label = n.Nombre,
+                title = $"{n.Rol} | Intereses: {string.Join(", ", n.Intereses)}",
+                group = n.Rol,
+                shape = n.Rol == "Profesor" ? "diamond" :
+                        n.Rol == "Estudiante" ? "ellipse" : "square",
+                color = GetColor(n.Rol)
+            }).ToList();
+
+            var edges = grafo.Aristas.Select(a => new
+            {
+                from = a.Origen.Id,
+                to = a.Destino.Id,
+                label = $"{a.Tipo} ({a.Peso})",
+                title = $"Desde: {a.Fecha.ToShortDateString()} | Duración: {a.DuracionMeses} meses",
+                color = "#848484"
+            }).ToList();
+
+            objRef = DotNetObjectReference.Create(this);
+            await JSRuntime.InvokeVoidAsync("drawGraph", nodes, edges);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al generar gráfico: {ex.Message}");
+        }
+    }
+
+    private string GetShape(string role) => role switch
+    {
+        "Profesor" => "diamond",
+        "Estudiante" => "ellipse",
+        "Investigador" => "square",
+        _ => "circle"
+    };
+
+    private string GetColor(string role) => role switch
+    {
+        "Profesor" => "#007bff",
+        "Estudiante" => "#FFD700",
+        "Investigador" => "#28a745",
+        _ => "#ccc"
+    };
+
+
+
+    public void Dispose()
+    {
+        objRef?.Dispose();
+        GC.SuppressFinalize(this);
     }
 }
