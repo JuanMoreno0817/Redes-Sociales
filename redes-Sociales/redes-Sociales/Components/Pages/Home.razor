@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using redes_Sociales.Data.Models
+@using redes_Sociales.Data
 
 <div class="container mt-4">
     <div class="row text-center">
@@ -11,18 +12,24 @@
         <div class="col-md-5 text-center">
             <br class="col-md-5">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="buscarInput" placeholder="Ingrese un nombre...">
-                <label for="buscarInput">Buscar</label>
+                <input type="text" class="form-control" @bind="terminoBusqueda"
+                placeholder="Ingrese un interés..." id="buscarInput" />
+                <label for="buscarInput">Buscar por Interés</label>
             </div>
-            <button class="btn btn-dark w-100 mb-4">Buscar</button>
-
+            <button class="btn btn-outline-info w-100 mb-4" @onclick="BuscarPorInteres">
+                <i class="bi bi-search"></i> Buscar
+            </button>
+            <button class="btn btn-outline-danger w-100 mb-4" @onclick="RestaurarGrafoOriginal">
+                <i class="bi bi-arrow-clockwise"></i>  Restaurar
+            </button>
+            <br class="col-md-5">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nombreInput" placeholder="Nombre">
+                <input type="text" class="form-control" @bind="nombreUsuario" id="nombreInput" placeholder="Nombre">
                 <label for="nombreInput">Nombre</label>
             </div>
 
             <div class="form-floating mb-3">
-                <select class="form-select" id="rolSelect">
+                <select class="form-select" id="rolSelect" @bind="rolSelect">
                     <option value="">Seleccione un rol</option>
                     <option value="Profesor">Profesor</option>
                     <option value="Estudiante">Estudiante</option>
@@ -31,11 +38,33 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="interesesInput" placeholder="IA, Programación, ...">
-                <label for="interesesInput">Intereses</label>
+                <input type="text" class="form-control" @bind="intereses"
+                id="interesesInput" placeholder="Ej: IA, Programación, Robótica" />
+                <label for="interesesInput">Intereses (separados por comas)</label>
             </div>
 
-            <button class="btn btn-dark w-100 mb-4">Agregar Perfil</button>
+            @if (!formatoValido)
+            {
+                <div class="alert alert-warning mt-2">
+                    Por favor separa los intereses con comas (Ej: IA, Programación)
+                </div>
+            }
+
+            <button class="btn btn-outline-success w-100 mb-4" @onclick="AgregarUsuarioHandler">Agregar Perfil</button>
+
+            @if (!formatoValido1)
+            {
+                <div class="alert alert-warning mt-2">
+                    @mensajeError
+                </div>
+            }
+
+            @if (!formatoValido2)
+            {
+                <div class="alert alert-warning mt-2">
+                    @mensajeError
+                </div>
+            }
 
             <div>
                 <h1 class="Tittle">Indices</h1>
@@ -58,7 +87,101 @@
 
         <!-- Columna de Gráfica -->
         <div class="col-md-7 text-center">
-            <GraphViewer />
+            <GraphViewer @ref="graphViewerRef" />
         </div>
     </div>
 </div>
+
+@code {
+    private GraphService graphService = new GraphService();
+    private GraphViewer? graphViewerRef;
+    private Nodo? Nodo;
+    private string terminoBusqueda = string.Empty;
+    private string nombreUsuario = string.Empty;
+    private string rolSelect = string.Empty;
+    private string intereses = string.Empty;
+    private List<string> interesesInput = new List<string>();
+    private bool formatoValido = true;
+    private bool formatoValido1 = true;
+    private bool formatoValido2 = true;
+    private string mensajeError = string.Empty;
+
+    private async Task BuscarPorInteres()
+    {
+        if (graphViewerRef != null)
+        {
+            await graphViewerRef.FiltrarPorInteres(terminoBusqueda);
+        }
+    }
+
+    private async Task RestaurarGrafoOriginal()
+    {
+        terminoBusqueda = string.Empty; // Limpia el filtro
+        if (graphViewerRef != null)
+        {
+            await graphViewerRef.FiltrarPorInteres(terminoBusqueda);
+        }
+    }
+
+    private async Task AgregarUsuarioHandler()
+    {
+        formatoValido1 = await agregarUsuario();
+
+        if (!formatoValido1)
+        {
+            mensajeError = "Error al agregar usuario. Verifique los datos.";
+        }
+        else
+        {
+            mensajeError = "Usuario agregado correctamente!";
+            formatoValido2 = false;
+            nombreUsuario = string.Empty;
+            rolSelect = string.Empty;
+            intereses = string.Empty;
+        }
+    }
+
+    private Task<bool> agregarUsuario()
+    {
+        try
+        {
+            // Validación básica
+            if (string.IsNullOrWhiteSpace(nombreUsuario) ||
+                string.IsNullOrWhiteSpace(rolSelect) ||
+                string.IsNullOrWhiteSpace(intereses))
+            {
+                mensajeError = "Todos los campos son obligatorios";
+                return Task.FromResult(false);
+            }
+
+            // Procesar intereses
+            interesesInput = intereses.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(i => i.Trim())
+                .Where(i => !string.IsNullOrWhiteSpace(i))
+                .ToList();
+
+            if (!interesesInput.Any())
+            {
+                mensajeError = "Ingrese al menos un interés válido";
+                return Task.FromResult(false);
+            }
+
+            // Crear y agregar nodo
+            var nuevoNodo = new Nodo(null, nombreUsuario, rolSelect, interesesInput);
+            bool resultado = graphService.agregarUsuario(nuevoNodo);
+
+            if (!resultado)
+            {
+                mensajeError = "El usuario ya existe o hubo un error";
+                return Task.FromResult(false);
+            }
+
+            return Task.FromResult(true);
+        }
+        catch (Exception ex)
+        {
+            mensajeError = $"Error inesperado: {ex.Message}";
+            return Task.FromResult(false);
+        }
+    }
+}

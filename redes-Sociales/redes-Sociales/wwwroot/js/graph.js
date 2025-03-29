@@ -1,5 +1,5 @@
-﻿function drawGraph(nodes, edges) {
-    console.log("Ejecutando drawGraph con:", { nodes, edges });
+﻿function drawGraph(nodes, edges, filter = null) {
+    console.log("Ejecutando drawGraph con:", { nodes, edges, filter});
 
     const container = document.getElementById('graph-visualization');
     if (!container) {
@@ -17,8 +17,8 @@
         }
 
         // Crear datasets
-        const nodesDataset = new vis.DataSet(nodes);
-        const edgesDataset = new vis.DataSet(edges || []);
+        const nodesToShow = Array.isArray(nodes) ? nodes : [];
+        const edgesToShow = Array.isArray(edges) ? edges : [];
 
         // Configuración robusta
         const options = {
@@ -52,8 +52,7 @@
                 },
                 arrows: {
                     to: {
-                        enabled: true,
-                        scaleFactor: 0.5
+                        enabled: false
                     }
                 }
             },
@@ -72,11 +71,9 @@
 
         // Crear la red
         const network = new vis.Network(container, {
-            nodes: nodesDataset,
-            edges: edgesDataset
+            nodes: new vis.DataSet(nodesToShow),
+            edges: new vis.DataSet(edgesToShow) 
         }, options);
-
-        console.log("Grafo renderizado con éxito!");
 
         // Forzar redimensionamiento si es necesario
         setTimeout(() => {

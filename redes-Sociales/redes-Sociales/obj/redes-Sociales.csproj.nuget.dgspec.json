@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj": {}
+    "C:\\Users\\juane\\Source\\Repos\\Redes-Sociales\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj": {
+    "C:\\Users\\juane\\Source\\Repos\\Redes-Sociales\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj",
+        "projectUniqueName": "C:\\Users\\juane\\Source\\Repos\\Redes-Sociales\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj",
         "projectName": "redes-Sociales",
-        "projectPath": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj",
-        "packagesPath": "C:\\Users\\zulet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zulet\\Documents\\Zara\\Matemáticas Avanzadas para la Informática\\redes-Sociales\\redes-Sociales\\obj\\",
+        "projectPath": "C:\\Users\\juane\\Source\\Repos\\Redes-Sociales\\redes-Sociales\\redes-Sociales\\redes-Sociales.csproj",
+        "packagesPath": "C:\\Users\\juane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juane\\Source\\Repos\\Redes-Sociales\\redes-Sociales\\redes-Sociales\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\zulet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\juane\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

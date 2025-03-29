@@ -5,13 +5,31 @@ namespace redes_Sociales.Data
 {
     public class GraphService
     {
-        public Grafo Grafo { get; private set; } = new Grafo();
+        public Grafo Grafo { get;  set; } = new Grafo();
         private Dictionary<Nodo, string> _comunidades;
+        private int _ultimoId;
+        public event Action OnGraphChanged;
+        private bool _ejemploCargado = false;
 
         public GraphService()
         {
-            CargarGrafoEjemplo();
-            ObtenerNodosPorComunidad("IA");
+            _ultimoId = ObtenerNuevoId();
+            if (!_ejemploCargado)
+            {
+                CargarGrafoEjemplo();
+                _ejemploCargado = true;
+            }
+        }
+
+        private int ObtenerNuevoId()
+        {
+            if (!Grafo.Nodos.Any()) return 1;
+            else
+            {
+                return Grafo.Nodos.Keys
+                .Select(id => int.TryParse(id, out int num) ? num : 0)
+                .Max() + 1;
+            }
         }
 
         private void CargarGrafoEjemplo()
@@ -41,26 +59,31 @@ namespace redes_Sociales.Data
             Grafo.AgregarArista(nodos[7], nodos[2], 2, "Matemáticas", DateTime.Now, 6);
         }
 
-        private List<Nodo> ObtenerNodosPorComunidad(string comunidadFiltro)
+        public bool agregarUsuario(Nodo nodo) 
         {
-            var comunidades = new Dictionary<Nodo, string>();
-
-            var grupos = Grafo.Nodos.Values
-                .GroupBy(nodo => string.Join(", ", nodo.Intereses.OrderBy(i => i)))
-                .ToDictionary(g => g.Key, g => g.ToList());
-
-            foreach (var grupo in grupos)
+            if (nodo == null) return false;
+            else 
             {
-                string comunidad = "Interés: " + grupo.Key;
+                nodo.Id = ObtenerNuevoId().ToString();
+                Grafo.AgregarNodo(nodo);
+                OnGraphChanged?.Invoke();
 
-                foreach (var nodo in grupo.Value)
-                {
-                    comunidades[nodo] = comunidad;
-                }
+                Console.WriteLine($"Total nodos: {Grafo.Nodos.Count}");
+                Console.WriteLine($"Nodo agregado: {nodo.Id} - {nodo.Nombre}");
+                return true;
             }
+        }
 
-            // Filtrar nodos que pertenecen a la comunidad deseada
-            return comunidades.Where(c => c.Value == comunidadFiltro).Select(c => c.Key).ToList();
+        public List<Nodo> ObtenerNodosPorComunidad(string comunidadFiltro)
+        {
+            if (string.IsNullOrWhiteSpace(comunidadFiltro))
+                return Grafo.Nodos.Values.ToList();
+
+            // Búsqueda case-insensitive y parcial
+            return Grafo.Nodos.Values
+                .Where(nodo => nodo.Intereses.Any(interes =>
+                    interes.Contains(comunidadFiltro, StringComparison.OrdinalIgnoreCase)))
+                .ToList();
         }
 
     }

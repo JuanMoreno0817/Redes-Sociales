@@ -11,6 +11,8 @@
 
 @code {
     private Grafo grafo = new();
+    private List<Nodo> todosLosNodos = new();
+    private List<Arista> todasLasAristas = new();
     private DotNetObjectReference<GraphViewer>? objRef;
 
     protected override async Task OnInitializedAsync()
@@ -18,12 +20,24 @@
         try
         {
             grafo = GraphService.Grafo;
+            // Suscripción al evento de cambios
+            GraphService.OnGraphChanged += HandleGraphChanged;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine($"❌ Error inicializando: {ex.Message}");
         }
         await Task.CompletedTask;
+    }
+
+    private async void HandleGraphChanged()
+    {
+        await InvokeAsync(async () =>
+        {
+            Console.WriteLine("🔄 Evento recibido: Actualizando gráfico...");
+            await InitializeGraph();
+            StateHasChanged();
+        });
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -39,7 +53,8 @@
     {
         try
         {
-            var nodes = grafo.Nodos.Values.Select(n => new
+            Grafo grafoActual = GraphService.Grafo;
+            var nodes = grafoActual.Nodos.Values.Select(n => new
             {
                 id = n.Id,
                 label = n.Nombre,
@@ -50,7 +65,7 @@
                 color = GetColor(n.Rol)
             }).ToList();
 
-            var edges = grafo.Aristas.Select(a => new
+            var edges = grafoActual.Aristas.Select(a => new
             {
                 from = a.Origen.Id,
                 to = a.Destino.Id,
@@ -84,11 +99,58 @@
         _ => "#ccc"
     };
 
-
-
     public void Dispose()
     {
         objRef?.Dispose();
+        GraphService.OnGraphChanged -= HandleGraphChanged;
         GC.SuppressFinalize(this);
+    }
+
+    public async Task FiltrarPorInteres(string interes)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(interes))
+            {
+                await InitializeGraph();
+                return;
+            }
+
+            // 1. Obtener nodos filtrados
+            var nodosFiltrados = GraphService.ObtenerNodosPorComunidad(interes);
+
+            // 2. Obtener TODAS las aristas posibles (aunque conecten nodos no visibles)
+            var todasAristas = grafo.Aristas.ToList();
+
+            // 3. Formatear datos
+            var nodosFormateados = nodosFiltrados.Select(n => new
+            {
+                id = n.Id,
+                label = n.Nombre,
+                title = $"{n.Rol} | Intereses: {string.Join(", ", n.Intereses)}",
+                group = n.Rol
+            }).ToList();
+
+            var aristasFormateadas = todasAristas.Select(a => new
+            {
+                from = a.Origen.Id,
+                to = a.Destino.Id,
+                label = $"{a.Tipo} ({a.Peso})"
+            }).ToList();
+
+            Console.WriteLine($"Enviando a JS: {nodosFormateados.Count} nodos, {aristasFormateadas.Count} aristas");
+
+            // 4. Dibujar grafo (mostrará solo nodos visibles pero con todas las aristas)
+            await JSRuntime.InvokeVoidAsync(
+                "drawGraph",
+                nodosFormateados,
+                aristasFormateadas,
+                interes
+            );
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error filtrando por interés: {ex.Message}");
+        }
     }
 }

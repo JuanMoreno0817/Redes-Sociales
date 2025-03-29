@@ -67,3 +67,44 @@ C:\Users\zulet\Documents\Zara\Matemáticas Avanzadas para la Informática\redes-
 C:\Users\zulet\Documents\Zara\Matemáticas Avanzadas para la Informática\redes-Sociales\redes-Sociales\obj\Debug\net8.0\ref\redes-Sociales.dll
 C:\Users\zulet\Documents\Zara\Matemáticas Avanzadas para la Informática\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.RazorAssemblyInfo.cache
 C:\Users\zulet\Documents\Zara\Matemáticas Avanzadas para la Informática\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.RazorAssemblyInfo.cs
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\appsettings.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\package-lock.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\package.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.staticwebassets.runtime.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.staticwebassets.endpoints.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.exe
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.deps.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.runtimeconfig.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.dll
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\redes-Sociales.pdb
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\Blazor.Extensions.Canvas.JS.dll
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\bin\Debug\net8.0\Blazor.Extensions.Canvas.dll
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.csproj.AssemblyReference.cache
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.AssemblyInfoInputs.cache
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.AssemblyInfo.cs
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.csproj.CoreCompileInputs.cache
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.RazorAssemblyInfo.cache
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.RazorAssemblyInfo.cs
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.sourcelink.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\scopedcss\bundle\redes-Sociales.styles.css
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\scopedcss\projectbundle\redes-Sociales.bundle.scp.css
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets\msbuild.redes-Sociales.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets\msbuild.redes-Sociales.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets\msbuild.build.redes-Sociales.props
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.redes-Sociales.props
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.redes-Sociales.props
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-So.67584D6A.Up2Date
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.dll
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\refint\redes-Sociales.dll
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.pdb
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\redes-Sociales.genruntimeconfig.cache
+C:\Users\juane\Source\Repos\Redes-Sociales\redes-Sociales\redes-Sociales\obj\Debug\net8.0\ref\redes-Sociales.dll
