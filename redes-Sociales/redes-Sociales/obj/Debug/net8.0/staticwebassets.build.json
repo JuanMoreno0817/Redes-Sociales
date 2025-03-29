@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oeuDPVXyzdAof/DG7UNgYsQarMoqonBt3uxaSJPMzzo=",
+  "Hash": "xCDRqUs6KlqFZHOQ09MA58fiQ98WhPm1AQ0+0+rN6ek=",
   "Source": "redes-Sociales",
   "BasePath": "_content/redes-Sociales",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0vifknfaxw",
-      "Integrity": "xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM=",
+      "Fingerprint": "b61158kos1",
+      "Integrity": "zb5mjUr2JSWeRqVpd3N1c6IObGf+qBILRSeoFUDn/Gw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
@@ -266,7 +266,7 @@
       ]
     },
     {
-      "Route": "css/app.0vifknfaxw.css",
+      "Route": "css/app.b61158kos1.css",
       "AssetFile": "C:\\Users\\juane\\Source\\Repos\\Redes-Sociales\\redes-Sociales\\redes-Sociales\\wwwroot\\css\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -276,7 +276,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1454"
+          "Value": "1961"
         },
         {
           "Name": "Content-Type",
@@ -284,11 +284,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM=\""
+          "Value": "\"zb5mjUr2JSWeRqVpd3N1c6IObGf+qBILRSeoFUDn/Gw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 21:16:33 GMT"
+          "Value": "Sat, 29 Mar 2025 01:26:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -298,7 +298,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "0vifknfaxw"
+          "Value": "b61158kos1"
         },
         {
           "Name": "label",
@@ -306,7 +306,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM="
+          "Value": "sha256-zb5mjUr2JSWeRqVpd3N1c6IObGf+qBILRSeoFUDn/Gw="
         }
       ]
     },
@@ -321,7 +321,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1454"
+          "Value": "1961"
         },
         {
           "Name": "Content-Type",
@@ -329,11 +329,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM=\""
+          "Value": "\"zb5mjUr2JSWeRqVpd3N1c6IObGf+qBILRSeoFUDn/Gw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 21:16:33 GMT"
+          "Value": "Sat, 29 Mar 2025 01:26:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -343,7 +343,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xDIuu8F5jOnI0POFlPlxocmZihFEHJXUDV9ZGu5juBM="
+          "Value": "sha256-zb5mjUr2JSWeRqVpd3N1c6IObGf+qBILRSeoFUDn/Gw="
         }
       ]
     },

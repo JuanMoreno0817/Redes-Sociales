@@ -73,3 +73,36 @@
     justify-content: center;
     margin-right: 5px;
 }
+
+.legend-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.diamond {
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    transform: rotate(45deg);
+}
+
+.oval {
+    width: 20px;
+    height: 15px;
+    background-color: #FFD700;
+    border-radius: 50%;
+}
+
+.square {
+    width: 15px;
+    height: 15px;
+    background-color: #28a745;
+}

@@ -10,7 +10,11 @@
     <div class="row mt-4">
         <!-- Columna de Formulario -->
         <div class="col-md-5 text-center">
-            <br class="col-md-5">
+            <!-- Separador -->
+            <hr class="my-4">
+
+            <!-- Formulario para agregar relaciones -->
+            <h4 class="mb-3">Comunidades</h4>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" @bind="terminoBusqueda"
                 placeholder="Ingrese un interés..." id="buscarInput" />
@@ -22,7 +26,32 @@
             <button class="btn btn-outline-danger w-100 mb-4" @onclick="RestaurarGrafoOriginal">
                 <i class="bi bi-arrow-clockwise"></i>  Restaurar
             </button>
-            <br class="col-md-5">
+            <!-- Separador -->
+            <hr class="my-4">
+
+            <!-- Formulario para agregar relaciones -->
+            <h4 class="mb-3">Peso Nodo</h4>
+            <div class="form-floating mb-3">
+                <select class="form-select" @bind="nodoFocalId" id="focalSelect">
+                    <option value="">Seleccione nodo focal</option>
+                    @foreach (var nodo in nodosExistentes.OrderByDescending(n => ObtenerGrado(n.Id)))
+                    {
+                        <option value="@nodo.Id">@nodo.Nombre (@ObtenerGrado(nodo.Id) relaciones)</option>
+                    }
+                </select>
+                <label for="focalSelect">Nodo focal y sus conexiones</label>
+            </div>
+
+            <button class="btn btn-outline-secondary w-100 mb-4" @onclick="MostrarRedLocal"
+            disabled="@(string.IsNullOrEmpty(nodoFocalId))">
+                <i class="bi bi-focus"></i> Mostrar Red Local
+            </button>
+
+            <!-- Separador -->
+            <hr class="my-4">
+
+            <!-- Formulario para agregar relaciones -->
+            <h4 class="mb-3">Agregar Nodo</h4>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" @bind="nombreUsuario" id="nombreInput" placeholder="Nombre">
                 <label for="nombreInput">Nombre</label>
@@ -43,29 +72,83 @@
                 <label for="interesesInput">Intereses (separados por comas)</label>
             </div>
 
-            @if (!formatoValido)
-            {
-                <div class="alert alert-warning mt-2">
-                    Por favor separa los intereses con comas (Ej: IA, Programación)
-                </div>
-            }
-
             <button class="btn btn-outline-success w-100 mb-4" @onclick="AgregarUsuarioHandler">Agregar Perfil</button>
 
-            @if (!formatoValido1)
+            @if (!string.IsNullOrEmpty(mensajeError))
             {
                 <div class="alert alert-warning mt-2">
                     @mensajeError
                 </div>
             }
 
-            @if (!formatoValido2)
+            @if (mensajeExitoso)
             {
                 <div class="alert alert-warning mt-2">
-                    @mensajeError
+                    Nodo creado éxitosamente!
+                </div>
+            }
+            <!-- Separador -->
+            <hr class="my-4">
+
+            <!-- Formulario para agregar relaciones -->
+            <h4 class="mb-3">Agregar Relación</h4>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" @bind="nodoOrigenId" id="origenSelect">
+                    <option value="">Seleccione nodo origen</option>
+                    @foreach (var nodo in nodosExistentes?.OrderByDescending(n => ObtenerGrado(n.Id)) ?? Enumerable.Empty<Nodo>())
+                    {
+                        <option value="@nodo.Id">@nodo.Nombre (@ObtenerGrado(nodo.Id) relaciones)</option>
+                    }
+                </select>
+                <label for="origenSelect">Nodo Origen</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" @bind="nodoDestinoId" id="destinoSelect">
+                    <option value="">Seleccione nodo destino</option>
+                    @foreach (var nodo in nodosExistentes?.OrderByDescending(n => ObtenerGrado(n.Id)) ?? Enumerable.Empty<Nodo>())
+                    {
+                        <option value="@nodo.Id">@nodo.Nombre (@ObtenerGrado(nodo.Id) relaciones)</option>
+                    }
+                </select>
+                <label for="destinoSelect">Nodo Destino</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="tipoRelacion"
+                id="tipoInput" placeholder="Ej: Tutoría, Colaboración" />
+                <label for="tipoInput">Tipo de Relación</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" @bind="duracionMeses"
+                id="duracionInput" placeholder="Duración en meses" min="1" />
+                <label for="duracionInput">Duración (meses)</label>
+            </div>
+
+            <button class="btn btn-outline-primary w-100 mb-4" @onclick="AgregarRelacionHandler">
+                <i class="bi bi-link-45deg"></i> Crear Relación
+            </button>
+
+            @if (!relacionValida)
+            {
+                <div class="alert alert-danger mt-2">
+                    @mensajeErrorRelacion
                 </div>
             }
 
+            @if (relacionExitosa)
+            {
+                <div class="alert alert-success mt-2">
+                    Relación creada exitosamente!
+                </div>
+            }
+        </div>
+
+        <!-- Columna de Gráfica -->
+        <div class="col-md-7 text-center">
+            <GraphViewer @ref="graphViewerRef" />
             <div>
                 <h1 class="Tittle">Indices</h1>
                 <div class="legend-container">
@@ -84,15 +167,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- Columna de Gráfica -->
-        <div class="col-md-7 text-center">
-            <GraphViewer @ref="graphViewerRef" />
-        </div>
     </div>
 </div>
 
 @code {
+    //Variables para busqueda y agregar nodos
     @inject GraphService GraphService
     private GraphViewer? graphViewerRef;
     private Nodo? Nodo;
@@ -103,8 +182,19 @@
     private List<string> interesesInput = new List<string>();
     private bool formatoValido = true;
     private bool formatoValido1 = true;
-    private bool formatoValido2 = true;
+    private bool mensajeExitoso = false;
     private string mensajeError = string.Empty;
+    // Variables para el formulario de relación
+    private string nodoOrigenId = string.Empty;
+    private string nodoDestinoId = string.Empty;
+    private string tipoRelacion = string.Empty;
+    private double pesoRelacion = 1;
+    private int duracionMeses = 1;
+    private bool relacionValida = true;
+    private bool relacionExitosa = false;
+    private string mensajeErrorRelacion = string.Empty;
+    // Variable para controlar si se muestran los pesos
+    private string nodoFocalId = string.Empty;
 
     private async Task BuscarPorInteres()
     {
@@ -127,18 +217,9 @@
     {
         // Limpiar mensajes previos
         mensajeError = string.Empty;
-        mensajeError = string.Empty;
 
         var formatoValido2 = await ValidarYAgregarUsuario();
 
-        if (formatoValido2)
-        {
-            mensajeError = "Usuario agregado correctamente!";
-            await LimpiarFormulario();
-
-            // Forzar actualización de la UI
-            StateHasChanged();
-        }
     }
 
     private async Task<bool> ValidarYAgregarUsuario()
@@ -151,7 +232,7 @@
                 string.IsNullOrWhiteSpace(intereses))
             {
                 mensajeError = "Todos los campos son obligatorios";
-                return false;
+                return true;
             }
 
             // Procesar intereses
@@ -173,6 +254,7 @@
                 rol: rolSelect,
                 intereses: interesesProcesados);
 
+
             bool formatoValido1 = GraphService.AgregarUsuario(nuevoNodo);
 
             if (!formatoValido1)
@@ -180,13 +262,23 @@
                 mensajeError = "No se pudo agregar el usuario.";
                 return false;
             }
+            else
+            {
+                mensajeExitoso = true;
+            }
+
+            nodosExistentes = GraphService.Grafo.Nodos.Values
+                .OrderBy(n => n.Nombre)
+                .ToList();
+
+            // Forzar actualización de UI
+            await InvokeAsync(StateHasChanged);
 
             return true;
         }
         catch (Exception ex)
         {
             mensajeError = $"Error inesperado: {ex.Message}";
-            Console.WriteLine($"❌ Error: {ex}");
             return false;
         }
     }
@@ -197,5 +289,179 @@
         rolSelect = string.Empty;
         intereses = string.Empty;
         return Task.CompletedTask;
+    }
+    // Lista de nodos para los dropdowns
+    private List<Nodo> nodosExistentes = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Cargar nodos existentes
+        await CargarNodosExistentes();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task CargarNodosExistentes()
+    {
+        try
+        {
+            // Obtener nodos del servicio y ordenarlos por nombre
+            nodosExistentes = GraphService.Grafo.Nodos.Values
+                .OrderBy(n => n.Nombre)
+                .ToList();
+
+            // Forzar actualización de los dropdowns
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error cargando nodos: {ex.Message}");
+        }
+    }
+
+    private async Task AgregarRelacionHandler()
+    {
+        relacionValida = true;
+        relacionExitosa = false;
+        mensajeErrorRelacion = string.Empty;
+
+        // Validaciones
+        if (string.IsNullOrEmpty(nodoOrigenId) || string.IsNullOrEmpty(nodoDestinoId))
+        {
+            relacionValida = false;
+            mensajeErrorRelacion = "Debe seleccionar ambos nodos";
+            return;
+        }
+
+        if (nodoOrigenId == nodoDestinoId)
+        {
+            relacionValida = false;
+            mensajeErrorRelacion = "No puede relacionar un nodo consigo mismo";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(tipoRelacion))
+        {
+            relacionValida = false;
+            mensajeErrorRelacion = "Debe especificar el tipo de relación";
+            return;
+        }
+
+        if (pesoRelacion < 1 || pesoRelacion > 10)
+        {
+            relacionValida = false;
+            mensajeErrorRelacion = "El peso debe estar entre 1 y 10";
+            return;
+        }
+
+        if (duracionMeses < 1)
+        {
+            relacionValida = false;
+            mensajeErrorRelacion = "La duración debe ser al menos 1 mes";
+            return;
+        }
+
+        try
+        {
+            // Obtener los nodos completos
+            var origen = GraphService.Grafo.Nodos[nodoOrigenId];
+            var destino = GraphService.Grafo.Nodos[nodoDestinoId];
+
+            // Agregar la relación
+            GraphService.Grafo.AgregarArista(
+                origen,
+                destino,
+                pesoRelacion,
+                tipoRelacion,
+                DateTime.Now,
+                duracionMeses);
+
+            // Éxito
+            relacionExitosa = true;
+            StateHasChanged();
+
+            // Limpiar formulario después de 2 segundos
+            await Task.Delay(2000);
+            await LimpiarFormularioRelacion();
+        }
+        catch (Exception ex)
+        {
+            relacionValida = false;
+            mensajeErrorRelacion = $"Error al crear relación: {ex.Message}";
+        }
+    }
+
+    private Task LimpiarFormularioRelacion()
+    {
+        nodoOrigenId = string.Empty;
+        nodoDestinoId = string.Empty;
+        tipoRelacion = string.Empty;
+        pesoRelacion = 1;
+        duracionMeses = 1;
+        relacionExitosa = false;
+        return Task.CompletedTask;
+    }
+
+    private async Task MostrarRedLocal()
+    {
+        if (string.IsNullOrEmpty(nodoFocalId)) return;
+
+        try
+        {
+            // Obtener nodo focal y sus conexiones directas
+            var nodoFocal = GraphService.Grafo.Nodos[nodoFocalId];
+            var nodosConectados = new List<Nodo> { nodoFocal };
+            var aristasRelacionadas = new List<Arista>();
+
+            // Encontrar todas las aristas relacionadas
+            foreach (var arista in GraphService.Grafo.Aristas)
+            {
+                if (arista.Origen.Id == nodoFocalId)
+                {
+                    nodosConectados.Add(arista.Destino);
+                    aristasRelacionadas.Add(arista);
+                }
+                else if (arista.Destino.Id == nodoFocalId)
+                {
+                    nodosConectados.Add(arista.Origen);
+                    aristasRelacionadas.Add(arista);
+                }
+            }
+
+            // Crear un subgrafo temporal
+            var subgrafo = new Grafo();
+            foreach (var nodo in nodosConectados)
+            {
+                subgrafo.AgregarNodo(nodo);
+            }
+            foreach (var arista in aristasRelacionadas)
+            {
+                subgrafo.AgregarArista(
+                    arista.Origen,
+                    arista.Destino,
+                    arista.Peso,
+                    arista.Tipo,
+                    arista.Fecha,
+                    arista.DuracionMeses
+                );
+            }
+
+            // Actualizar el visor con el subgrafo
+            if (graphViewerRef != null)
+            {
+                await graphViewerRef.MostrarSubgrafo(subgrafo);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al mostrar red local: {ex.Message}");
+        }
+    }
+
+    private int ObtenerGrado(string nodoId)
+    {
+        if (!GraphService.Grafo.Nodos.ContainsKey(nodoId)) return 0;
+
+        return GraphService.Grafo.Aristas.Count(a =>
+            a.Origen.Id == nodoId || a.Destino.Id == nodoId);
     }
 }

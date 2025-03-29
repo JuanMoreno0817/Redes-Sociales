@@ -25,17 +25,6 @@ namespace redes_Sociales.Data
             private set => _grafo = value;
         }
 
-        private int ObtenerNuevoId()
-        {
-            if (!_grafo.Nodos.Any()) return 1;
-            else
-            {
-                return _grafo.Nodos.Keys
-                .Select(id => int.TryParse(id, out int num) ? num : 0)
-                .Max() + 1;
-            }
-        }
-
         private void CargarGrafoEjemplo()
         {
             var nodos = new[]
@@ -75,11 +64,8 @@ namespace redes_Sociales.Data
             if (_grafo.Nodos.ContainsKey(nodo.Id))
                 return false;
 
-            // Agregar el nodo (esto disparará OnGraphChanged internamente)
+            // Agregar el nodo 
             _grafo.AgregarNodo(nodo);
-
-            Console.WriteLine($"✅ Nodo agregado: {nodo.Id} - {nodo.Nombre}");
-            Console.WriteLine($"📊 Total nodos: {_grafo.Nodos.Count}");
 
             return true;
         }

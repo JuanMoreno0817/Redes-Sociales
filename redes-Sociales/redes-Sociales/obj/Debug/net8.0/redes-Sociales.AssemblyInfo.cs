@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("redes-Sociales")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+642fb055b5605997cffe0ff32603d61420a28a28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52fb552644fdd640311979ccc5ce3a187d5ced68")]
 [assembly: System.Reflection.AssemblyProductAttribute("redes-Sociales")]
 [assembly: System.Reflection.AssemblyTitleAttribute("redes-Sociales")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
