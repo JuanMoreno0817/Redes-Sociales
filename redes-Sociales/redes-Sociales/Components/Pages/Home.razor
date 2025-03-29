@@ -93,7 +93,7 @@
 </div>
 
 @code {
-    private GraphService graphService = new GraphService();
+    @inject GraphService GraphService
     private GraphViewer? graphViewerRef;
     private Nodo? Nodo;
     private string terminoBusqueda = string.Empty;
@@ -125,23 +125,23 @@
 
     private async Task AgregarUsuarioHandler()
     {
-        formatoValido1 = await agregarUsuario();
+        // Limpiar mensajes previos
+        mensajeError = string.Empty;
+        mensajeError = string.Empty;
 
-        if (!formatoValido1)
-        {
-            mensajeError = "Error al agregar usuario. Verifique los datos.";
-        }
-        else
+        var formatoValido2 = await ValidarYAgregarUsuario();
+
+        if (formatoValido2)
         {
             mensajeError = "Usuario agregado correctamente!";
-            formatoValido2 = false;
-            nombreUsuario = string.Empty;
-            rolSelect = string.Empty;
-            intereses = string.Empty;
+            await LimpiarFormulario();
+
+            // Forzar actualización de la UI
+            StateHasChanged();
         }
     }
 
-    private Task<bool> agregarUsuario()
+    private async Task<bool> ValidarYAgregarUsuario()
     {
         try
         {
@@ -151,37 +151,51 @@
                 string.IsNullOrWhiteSpace(intereses))
             {
                 mensajeError = "Todos los campos son obligatorios";
-                return Task.FromResult(false);
+                return false;
             }
 
             // Procesar intereses
-            interesesInput = intereses.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+            var interesesProcesados = intereses.Split(',')
                 .Select(i => i.Trim())
                 .Where(i => !string.IsNullOrWhiteSpace(i))
                 .ToList();
 
-            if (!interesesInput.Any())
+            if (!interesesProcesados.Any())
             {
                 mensajeError = "Ingrese al menos un interés válido";
-                return Task.FromResult(false);
+                return false;
             }
 
             // Crear y agregar nodo
-            var nuevoNodo = new Nodo(null, nombreUsuario, rolSelect, interesesInput);
-            bool resultado = graphService.agregarUsuario(nuevoNodo);
+            var nuevoNodo = new Nodo(
+                id: null, // El servicio asignará el ID
+                nombre: nombreUsuario,
+                rol: rolSelect,
+                intereses: interesesProcesados);
 
-            if (!resultado)
+            bool formatoValido1 = GraphService.AgregarUsuario(nuevoNodo);
+
+            if (!formatoValido1)
             {
-                mensajeError = "El usuario ya existe o hubo un error";
-                return Task.FromResult(false);
+                mensajeError = "No se pudo agregar el usuario.";
+                return false;
             }
 
-            return Task.FromResult(true);
+            return true;
         }
         catch (Exception ex)
         {
             mensajeError = $"Error inesperado: {ex.Message}";
-            return Task.FromResult(false);
+            Console.WriteLine($"❌ Error: {ex}");
+            return false;
         }
+    }
+
+    private Task LimpiarFormulario()
+    {
+        nombreUsuario = string.Empty;
+        rolSelect = string.Empty;
+        intereses = string.Empty;
+        return Task.CompletedTask;
     }
 }

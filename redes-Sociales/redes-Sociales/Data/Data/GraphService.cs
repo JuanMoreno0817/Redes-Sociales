@@ -5,15 +5,13 @@ namespace redes_Sociales.Data
 {
     public class GraphService
     {
-        public Grafo Grafo { get;  set; } = new Grafo();
+        public Grafo _grafo { get;  set; } = new Grafo();
         private Dictionary<Nodo, string> _comunidades;
-        private int _ultimoId;
         public event Action OnGraphChanged;
         private bool _ejemploCargado = false;
 
         public GraphService()
         {
-            _ultimoId = ObtenerNuevoId();
             if (!_ejemploCargado)
             {
                 CargarGrafoEjemplo();
@@ -21,12 +19,18 @@ namespace redes_Sociales.Data
             }
         }
 
+        public Grafo Grafo
+        {
+            get => _grafo;    
+            private set => _grafo = value;
+        }
+
         private int ObtenerNuevoId()
         {
-            if (!Grafo.Nodos.Any()) return 1;
+            if (!_grafo.Nodos.Any()) return 1;
             else
             {
-                return Grafo.Nodos.Keys
+                return _grafo.Nodos.Keys
                 .Select(id => int.TryParse(id, out int num) ? num : 0)
                 .Max() + 1;
             }
@@ -47,40 +51,46 @@ namespace redes_Sociales.Data
             };
 
             foreach (var nodo in nodos)
-                Grafo.AgregarNodo(nodo);
+                _grafo.AgregarNodo(nodo);
 
-            Grafo.AgregarArista(nodos[0], nodos[3], 3, "Tutoría", DateTime.Now, 6);
-            Grafo.AgregarArista(nodos[3], nodos[1], 1, "Colaboración", DateTime.Now, 8);
-            Grafo.AgregarArista(nodos[1], nodos[4], 2, "Investigación", DateTime.Now, 4);
-            Grafo.AgregarArista(nodos[2], nodos[4], 2, "Tutoría", DateTime.Now, 7);
-            Grafo.AgregarArista(nodos[0], nodos[2], 3, "Colaboración", DateTime.Now, 5);
-            Grafo.AgregarArista(nodos[5], nodos[1], 2, "Redes", DateTime.Now, 9);
-            Grafo.AgregarArista(nodos[6], nodos[0], 3, "IA", DateTime.Now, 5);
-            Grafo.AgregarArista(nodos[7], nodos[2], 2, "Matemáticas", DateTime.Now, 6);
+            _grafo.AgregarArista(nodos[0], nodos[3], 3, "Tutoría", DateTime.Now, 6);
+            _grafo.AgregarArista(nodos[3], nodos[1], 1, "Colaboración", DateTime.Now, 8);
+            _grafo.AgregarArista(nodos[1], nodos[4], 2, "Investigación", DateTime.Now, 4);
+            _grafo.AgregarArista(nodos[2], nodos[4], 2, "Tutoría", DateTime.Now, 7);
+            _grafo.AgregarArista(nodos[0], nodos[2], 3, "Colaboración", DateTime.Now, 5);
+            _grafo.AgregarArista(nodos[5], nodos[1], 2, "Redes", DateTime.Now, 9);
+            _grafo.AgregarArista(nodos[6], nodos[0], 3, "IA", DateTime.Now, 5);
+            _grafo.AgregarArista(nodos[7], nodos[2], 2, "Matemáticas", DateTime.Now, 6);
         }
 
-        public bool agregarUsuario(Nodo nodo) 
+        public bool AgregarUsuario(Nodo nodo)
         {
-            if (nodo == null) return false;
-            else 
-            {
-                nodo.Id = ObtenerNuevoId().ToString();
-                Grafo.AgregarNodo(nodo);
-                OnGraphChanged?.Invoke();
+            if (nodo == null)
+                return false;
 
-                Console.WriteLine($"Total nodos: {Grafo.Nodos.Count}");
-                Console.WriteLine($"Nodo agregado: {nodo.Id} - {nodo.Nombre}");
-                return true;
-            }
+            // Generar ID único
+            nodo.Id = (_grafo.Nodos.Count + 1).ToString();
+
+            // Validar que no exista un nodo con el mismo ID
+            if (_grafo.Nodos.ContainsKey(nodo.Id))
+                return false;
+
+            // Agregar el nodo (esto disparará OnGraphChanged internamente)
+            _grafo.AgregarNodo(nodo);
+
+            Console.WriteLine($"✅ Nodo agregado: {nodo.Id} - {nodo.Nombre}");
+            Console.WriteLine($"📊 Total nodos: {_grafo.Nodos.Count}");
+
+            return true;
         }
 
         public List<Nodo> ObtenerNodosPorComunidad(string comunidadFiltro)
         {
             if (string.IsNullOrWhiteSpace(comunidadFiltro))
-                return Grafo.Nodos.Values.ToList();
+                return _grafo.Nodos.Values.ToList();
 
             // Búsqueda case-insensitive y parcial
-            return Grafo.Nodos.Values
+            return _grafo.Nodos.Values
                 .Where(nodo => nodo.Intereses.Any(interes =>
                     interes.Contains(comunidadFiltro, StringComparison.OrdinalIgnoreCase)))
                 .ToList();

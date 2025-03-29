@@ -19,9 +19,9 @@
     {
         try
         {
-            grafo = GraphService.Grafo;
+            grafo = GraphService._grafo;
             // Suscripción al evento de cambios
-            GraphService.OnGraphChanged += HandleGraphChanged;
+            GraphService.Grafo.OnGraphChanged += HandleGraphChanged;
         }
         catch (Exception ex)
         {
@@ -32,12 +32,7 @@
 
     private async void HandleGraphChanged()
     {
-        await InvokeAsync(async () =>
-        {
-            Console.WriteLine("🔄 Evento recibido: Actualizando gráfico...");
-            await InitializeGraph();
-            StateHasChanged();
-        });
+        await InvokeAsync(StateHasChanged);
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -102,7 +97,7 @@
     public void Dispose()
     {
         objRef?.Dispose();
-        GraphService.OnGraphChanged -= HandleGraphChanged;
+        GraphService._grafo.OnGraphChanged -= HandleGraphChanged;
         GC.SuppressFinalize(this);
     }
 
@@ -110,6 +105,7 @@
     {
         try
         {
+            var grafoActual = GraphService.Grafo;
             if (string.IsNullOrWhiteSpace(interes))
             {
                 await InitializeGraph();
@@ -120,7 +116,7 @@
             var nodosFiltrados = GraphService.ObtenerNodosPorComunidad(interes);
 
             // 2. Obtener TODAS las aristas posibles (aunque conecten nodos no visibles)
-            var todasAristas = grafo.Aristas.ToList();
+            var todasAristas = grafoActual.Aristas.ToList();
 
             // 3. Formatear datos
             var nodosFormateados = nodosFiltrados.Select(n => new
